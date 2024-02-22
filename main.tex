@@ -1,0 +1,307 @@
+%-------------------------
+% Resume in Latex
+% Author : Hitesh Nagar
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{4.09pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1},\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Connor Mulholland} % Your Name
+\newcommand{\course}{B.S. - Computer Science, Software Engineering} % Your Course
+\newcommand{\phone}{810-931-9351} % Your Phone Number
+\newcommand{\emaila}{20cmulholland@gmail.com} %Email 1
+\newcommand{\github}{cmulholla} %Github
+\newcommand{\website}{cmulholla.github.io/cmulholland/} %Website
+\newcommand{\linkedin}{connor-mulholland-2b9a3421a} %linkedin
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+
+\includegraphics[width=2cm,clip]{ltu-seal-v2-300.jpg}
+
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +1-\phone\\
+  \course &  \href{mailto:\emaila}{\emaila}\\
+  {Lawrence Technological University, Southfield} & \href{https://cmulholla.github.io/cmulholland/}{\website}\\
+  \href{https://github.com/\github}{github.com/\github} & \href{https://www.linkedin.com/in/\linkedin/}{linkedin.com/in/\linkedin}
+\end{tabularx}
+}
+
+
+
+%-----------EDUCATION-----------------
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {MBM University}{Jodhpur, India}
+%       {Bachelor of Engineering in Information Technology ;  GPA: 8.10}{July. 202X -- July. 202X (Expected)}
+%     \resumeSubheading
+%       {Model School}{Jaipur, Rajasthan}
+%       {Central Board of Secondary Education (Class XII);  Percentage: 96.60}{March. 2019}
+%   \resumeSubHeadingListEnd\vspace{-3mm}
+\section{Education}
+\setlength{\tabcolsep}{5pt} % Default value: 6pt
+% \renewcommand{\arraystretch}{1.1} % Default value: 1
+\small{\begin{tabularx}
+{\dimexpr\textwidth-3mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree/Certificate } & \textbf{Institute/Board} & \textbf{GPA} & \textbf{Year}\\
+  \hline
+  B.S.  & Lawrence Technological University & 2.94 (Current) & 2020-2024\\
+  \hline
+  Dual Enrollment & Mott Community College & 3.75 & 2019 \\
+  \hline
+\end{tabularx}}
+\vspace{-2mm}
+
+% %-----------EXPERIENCE-----------------
+ \section{Experience}
+   \resumeSubHeadingListStart
+    
+      \resumeSubheading
+        {LTU QUEST Project}{Lawrench Technological University}
+        {AI Researcher and Developer}{Nov. 2023 - May 2024}
+        \resumeItemListStart
+      \item {www.ltu.edu/arts-sciences/quest}
+      \item {Using generative AI to generate records in the imbalanced field,\\cognitive distortions, for use in training a classification AI.}
+          \item {This work is helping my faculty mentor in their research.}
+      \resumeItemListEnd
+
+      \resumeSubheading
+       {Imagesoft}{Online}
+       {Technical Intern}{June 2022 - Apr. 2023}
+       \resumeItemListStart
+     \item {Sprint planning and management, OnBase programming in C\#, OnBase Configuration}
+     \item {HTML and JavaScript form updating and debugging, SQL data queries}
+      \item {Creating forms and improving workflows for county governments.}
+     \resumeItemListEnd
+      
+   \resumeSubHeadingListEnd
+ \vspace{-5.5mm}
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+    
+    \resumeProject
+      {Re:Flect} %Project Name
+      {Spartahack 9, Michigan State University} %Project Name, Location Name
+      {Jan 27-28, 2024} %Event Dates
+      {\href{https://devpost.com/software/re-flect}{devpost.com/software/re-flect}} %Website
+      \resumeItemListStart
+        \item {During this hackathon, we made a smart mirror which shows the time, \\the weather, your upcoming commute, has a stopwatch built-in, all of \\which is fully configurable with an Android app.}
+        \item {I completed the app, helped on the basic construction of the mirror, and did lots of project management.}
+    \resumeItemListEnd
+
+    \resumeProject
+      {AutoNote} %Project Name
+      {Spartahack 8, Michigan State University} %Project Name, Location Name
+      {Jan. 28-29, 2023} %Event Dates
+      {\href{https://devpost.com/software/autonote-woigte}{devpost.com/software/autonote-woigte}} %Website
+      \resumeItemListStart
+        \item {During my first hackathon, my friend and I created a web application \\to automatically generate and store notes using many different technologies.}
+        \item {I mainly specialized in project management, web development, and database management during this project.}
+        \item {This project won the prize for Best use of MongoDB.}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+\section{Skills}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming} % Category
+    {Python, JavaScript, HTML, C++, C\#, Lua, Java*, SQL*, Rust*}
+% \resumeSubItem{Category XYZ} % Category
+%    {Skill A, Skill B, Skill C} % Skills
+  \resumeSubItem{Tools/Frameworks} % Category
+    {NodeJS, ReactJS*, Scikit*, AWS*, OnBase}
+ \resumeSubItem{Operating Systems}
+ {Windows, Linux*, Android*} 
+  \resumeSubItem{Non Technical}
+ {Project Management, Agile Developer, Fast Learner, Problem Solver} 
+\hfill \textit{\footnotesize{* Elementary proficiency}} \hspace{3mm}
+ \resumeHeadingSkillEnd
+
+
+\section{Key courses taken}
+\resumeHeadingSkillStart
+ \resumeSubItem{Programming} % Category
+    {Java, Python, Text Mining, Coding C\#, Coding Matlab}
+ \resumeSubItem{Software Engineering} % Category
+    {Software Engineering 1\&2, Software Architecture, \\Data Structures, Operating Systems, Computer Networks} % Skills
+ \resumeHeadingSkillEnd
+
+
+\section{Positions of Responsibility}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Section Leader} % Position
+    { Marching Band, LTU} %Club,Event
+    {Aug. 2020 - May 2024} %Tenure Period
+    \resumeItemListStart
+        \item {Section leader of the Mellophones and Alto Saxophones.}
+    %    \item {}
+    \resumeItemListEnd
+\resumePOR{Senior Patrol Leader} % Position
+    { Boy Scouts of America, Troop 340} %Club,Event
+    {June 2019 - Dec. 2019} %Tenure Period
+    \resumeItemListStart
+        \item {Planned and executed weekly troop activities, managed scout duties.}
+    %    \item {}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{Achievements}
+\vspace{-0.2mm}
+\resumeSubHeadingListStart
+\resumePOR{Best use of MongoDB} % Award
+    { Secured among the 90 submitted team projects} % Event
+    {2023} %Event Year
+\resumePOR{Eagle Scout} % Award
+    { Boy Scouts of America} % Event
+    {2020} %Event Year
+
+\resumeSubHeadingListEnd
+\vspace{-2mm}
+% \hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
+\section{Extracurriculars}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Mellophonist} % Position
+    { Lawrence Tech Marching Band} %Club,Event
+    {2020 - 2024} %Tenure Period
+\resumePOR{French Hornist} % Position
+    { Royal Oak Concert Band French Hornist, Trombonist} %Club,Event
+    {2023 - Current} %Tenure Period
+\resumeSubHeadingListEnd
+\vspace{-4mm}
+
+%-------------------------------------------
+\end{document}
