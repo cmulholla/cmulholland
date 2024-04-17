@@ -3,3 +3,5 @@
 [Connor's Online Resume](https://cmulholla.github.io/cmulholland/Resume/main.html)
 
 [Connor's Phasmophobia Hunting Guide](https://cmulholla.github.io/cmulholland/Connors-Phasmophobia-Hunting-Guide)
+
+[Fun heatmap made using Plotly](https://cmulholla.github.io/cmulholland/attractiveness_heatmap)
